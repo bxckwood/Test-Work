@@ -1,0 +1,19 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.posts h1 {
+    font-size: 20px;
+}
+
+.post {
+    display: flex;
+}
+
+.information h1 {
+    font-weight: normal;
+    text-decoration: underline
+}

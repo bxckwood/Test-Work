@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px 400px;
+    background-color: rgb(88, 88, 88);
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}

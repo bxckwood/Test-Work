@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text1 , .text2 {
+  width: 60%;
+}
+
+.text1 {
+height: 30px;
+}
+
+.text2 {
+  height: 300px;
+}
