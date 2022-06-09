@@ -42,14 +42,14 @@ const Registration = () => {
           placeholder="Почта"
         />
         <input
-          {...register("password", { required: true, minLength: 6 })}
+          {...register("password", { required: true, minLength: 2 })}
           type="password"
           placeholder="Введите пароль"
         />
         <input
           {...register("password_confirmation", {
             required: true,
-            minLength: 6,
+            minLength: 2,
             validate: (val) => {
               if (watch("password") !== val) {
                 return "баг";
