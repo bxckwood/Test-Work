@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CheckAllPosts.css";
 
@@ -20,7 +20,12 @@ const CheckAllPosts = () => {
       <div className="posts">
         {posts.map((elem) => (
           <div className="post">
-            <Link to={`/posts/${elem.id}`}>{elem.id} {elem.text}</Link>
+            <Link to={`/posts/${elem.id}`}>
+              {elem.id}{" "}
+              {elem.text.length > 14
+                ? elem.text.slice(0, 25) + "......."
+                : elem.text}
+            </Link>
           </div>
         ))}
       </div>
