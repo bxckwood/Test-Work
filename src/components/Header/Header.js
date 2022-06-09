@@ -6,7 +6,9 @@ const Header = () => {
     const navigate = useNavigate()
     const exitAcc = () => {
         localStorage.clear()
+        window.location.reload();
         navigate('/login')
+        
     }
 
     return (

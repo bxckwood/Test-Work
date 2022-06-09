@@ -30,7 +30,7 @@ const Registration = () => {
   return (
     <div className="register">
       <h1>Регистрация</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {localStorage.getItem("token") ? "Вы уже авторизованы" : <>      <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("name", { required: true })}
           type="text"
@@ -68,7 +68,7 @@ const Registration = () => {
             ? "Заполните все поля"
             : null}
         </div>
-      </form>
+      </form></>}
     </div>
   );
 };

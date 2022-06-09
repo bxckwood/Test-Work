@@ -3,6 +3,7 @@ import "./Authorization.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
+
 const Authorization = () => {
   const {
     register,
@@ -10,11 +11,15 @@ const Authorization = () => {
     formState: { errors, isValid },
   } = useForm({ mode: "onBlur" });
 
+
+
   const onSubmit = async (data) => {
     const responce = await axios.post("https://test.flcd.ru/api/token", data);
     if (!responce.ok) {
       alert("Вы вошли в аккаунт");
       localStorage.setItem("token", responce.data.token);
+      window.location.reload();
+
     } else {
       alert("Такого аккаунта нет");
     }
